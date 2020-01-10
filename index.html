@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pixel Art</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hint.css">
+    
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+          <div class="inputs">
+            <h4>select grid</h4>
+            <div class="select-size">
+              <span class="hint--rounded" aria-label="TOOLTIP: Press this button to reset the canvas.">
+              <input type="button" class="small-canvas canvas" data-value1="8" data-value2="8" value="8x8" onclick="createGrid()"></span>
+              <br>
+            <hr>       
+              </div>
+            <h4>select color</h4>
+            <input type="color" class="select-color" value="#6aa5b8">
+            <br><br>
+            <span class="hint--rounded" aria-label="TOOLTIP: Use Right-Click to erase single cells.">
+            <input type="button" class="fill-grid" value="fill canvas"></span>
+            <hr>
+            <span class="hint--rounded" aria-label="*Works only on Mozilla Firefox*: To save your work, press the Save button, press right-click on the image in the center then press 'Save Image As...'">
+            <input type="button" class="save-button" value="save" onclick="saveCanvas()"></span>                   
+          </div>
+        </div>
+        <div class="column">
+          <h1>Pixel Art</h1>
+          <table id="capture" class="pixel-canvas"></table>
+          <br>
+        </div>
+      </div>
+
+
+
+
+      <script src=https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js></script>
+      <script>
+        function saveCanvas() {
+          html2canvas(document.querySelector("#capture")).then(canvas => {  
+          let image = canvas.toDataURL("image/png").replace("image/png,", "image/octet-stream" );
+          window.location.href=image;
+        })};    
+        </script>
+      <script src="script.js"></script>
+    
+</body>
+</html>

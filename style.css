@@ -1,0 +1,151 @@
+body {
+  text-align: center;
+  font-family: Arial;
+  background: #77a1d3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e684ae,
+    #79cbca,
+    #77a1d3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e684ae,
+    #79cbca,
+    #77a1d3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+* {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu titles */
+h1 {
+  font-family: "Press Start 2P", cursive, sans-serif;
+  border: 1px solid black;
+  padding: 0.3em;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+
+/* Title */
+h4 {
+  margin: 1em 0 0.75em;
+  text-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+}
+
+table,
+tr,
+td {
+  border: black 1px solid;
+}
+
+.pixel-canvas {
+  background-color: white;
+}
+
+table {
+  margin-top: 4em;
+  border-collapse: collapse;
+}
+
+tr {
+  height: 60px;
+}
+
+td {
+  min-width: 60px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.submit-button,
+.fill-grid,
+.small-canvas,
+.save-button {
+  width: 140px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.submit-button:hover,
+.fill-grid:hover,
+.small-canvas:hover,
+.save-button:hover {
+  cursor: pointer;
+  color: white;
+  background: #13110f;
+  border-color: white;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+
+.select-color {
+  border: 1px solid black;
+  -webkit-appearance: none;
+  padding: 0;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.select-color::-webkit-color-swatch {
+  border: none;
+  padding: 0;
+}
+.select-color::-webkit-color-swatch-wrapper {
+  border: none;
+  padding: 0;
+}
+
+/* Left-side content */
+.inputs {
+  text-align: middle;
+  border-radius: 7px;
+  border: 2px solid black;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  height: 95vh;
+  width: 250px;
+  background-color: lightgray;
+}
+
+hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.column {
+  float: left;
+  width: 35%;
+}
+
+/* Center the title with the grid canvas */
+.column:last-of-type {
+  width: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
